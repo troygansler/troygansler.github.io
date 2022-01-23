@@ -1,0 +1,18 @@
+// Animations
+AOS.init({
+  anchorPlacement: "top-left",
+  duration: 1000,
+});
+
+// Add your javascript here
+// window.onload = function() {
+document.querySelectorAll("img").forEach(function (img) {
+  img.addEventListener("click", function (e) {
+    BigPicture({
+      // element from which animation starts (required)
+      el: e.target,
+      // image url
+      imgSrc: e.target.src,
+    });
+  });
+});
